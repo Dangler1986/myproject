@@ -6,7 +6,7 @@ pipeline {
                 // Get code from a GitHub repository
                 git url: 'https://github.com/Dangler1986/project.git', 
                  branch: 'ci',
-                 credentialsId: 'jenkins githab username pass'
+                 credentialsId: 'af605876-a338-4ad2-973c-9a8bcf609f4e'
             }
         }
         stage('AddRecordToFile') {
@@ -27,7 +27,7 @@ pipeline {
         }
         stage("Push") {
             environment {
-                GIT_AUTH = credentials('jenkins githab username pass')
+                GIT_AUTH = credentials('af605876-a338-4ad2-973c-9a8bcf609f4e')
             }
             steps {
                 sh('''
